@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fas {
+  color: red;
+}
+
+$border-radius: 5px;
+
+.todo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 750px;
+  height: 530px;
+  transform: translate(-50%, -50%);
+  background: #F4F6F8;
+  box-shadow: 2px 2px 20px #f3f3f3;
+  border-radius: $border-radius;
+  border: 1px solid #F1F1F1;
+
+  &__sidebar {
+    background: #E5E5E5;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #F1F1F1;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+  }
+}
