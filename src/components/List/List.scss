@@ -1,11 +1,22 @@
 .list {
   margin-bottom: 30px;
 
+  &__add-btn {
+    color: #767676;
+    font-style: italic;
+    opacity: .5;
+    transition: opacity .1s ease-in-out;
+    &:hover {
+      opacity: 1;
+  }
+  }
+
   li {
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 10px 12px;
+
 
     &.active {
       background: #FFFFFF;
@@ -16,6 +27,7 @@
     i {
       display: inline-flex;
       margin-right: 8px;
+      margin-bottom: 2px;
       color: #7C7C7C;
     }
 

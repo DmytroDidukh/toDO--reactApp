@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f4cc3a1-ab7b-413d-a332-380cd7a2eb45" name="Default Changelist" comment="fixup! add fontawasome">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/List/index.jsx" afterDir="false" />
+    <list default="true" id="0f4cc3a1-ab7b-413d-a332-380cd7a2eb45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/AddList/AddButtonList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddList/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Coding\JS\toDo--reactApp\src\components\AddListButton" />
       <recent name="D:\Coding\JS\toDo--reactApp\src\components\List" />
     </key>
   </component>
@@ -94,7 +98,10 @@
       <workItem from="1585313690304" duration="3256000" />
       <workItem from="1585332300090" duration="3958000" />
       <workItem from="1585380768605" duration="70000" />
-      <workItem from="1585420843605" duration="7146000" />
+      <workItem from="1585420843605" duration="7578000" />
+      <workItem from="1585479894157" duration="102000" />
+      <workItem from="1585504127976" duration="976000" />
+      <workItem from="1585505732143" duration="6642000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1585303217023</created>
@@ -117,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585335365877</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixup! add fontawasome">
+      <created>1585428442793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585428442793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +154,7 @@
     <MESSAGE value="a" />
     <MESSAGE value="add fontawasome" />
     <MESSAGE value="bla" />
-    <option name="LAST_COMMIT_MESSAGE" value="bla" />
+    <MESSAGE value="fixup! add fontawasome" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! add fontawasome" />
   </component>
 </project>

@@ -29,15 +29,20 @@ $border-radius: 5px;
   border-radius: $border-radius;
   border: 1px solid #F1F1F1;
   font-size: 14px;
+  //display: flex;
 
   &__sidebar {
     background: #E5E5E5;
     width: 200px;
-    height: 100%;
+    height: calc(100% - 120px);
     border-right: 1px solid #F1F1F1;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     padding: 60px 20px;
 
+  }
+
+  &__tasks {
+    flex: 1;
   }
 }
