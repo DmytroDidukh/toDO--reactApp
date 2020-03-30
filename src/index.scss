@@ -4,6 +4,7 @@
   list-style: none;
   outline: none;
   font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -29,12 +30,12 @@ $border-radius: 5px;
   border-radius: $border-radius;
   border: 1px solid #F1F1F1;
   font-size: 14px;
-  //display: flex;
+  display: flex;
 
   &__sidebar {
     background: #E5E5E5;
     width: 200px;
-    height: calc(100% - 120px);
+    //height: calc(100% - 120px);
     border-right: 1px solid #F1F1F1;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
@@ -44,5 +45,39 @@ $border-radius: 5px;
 
   &__tasks {
     flex: 1;
+  }
+}
+
+.field {
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:focus {
+    border-color: #dbdbdb;
+  }
+}
+
+.button {
+  background: #4DD599;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: darken(#4DD599, 6%);
+  }
+
+  &:active {
+    background: darken(#4DD599, 10%);
   }
 }

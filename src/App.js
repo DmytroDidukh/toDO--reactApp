@@ -2,8 +2,9 @@ import React from 'react';
 import List from './components/List/index'
 import AddList from "./components/AddList";
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import dB from './assets/db'
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function App() {
     return (
@@ -37,7 +38,7 @@ function App() {
                 ]}
                       isRemoveable={true}
                 />
-                <AddList/>
+                <AddList colors={dB.colors}/>
             </div>
             <div className="todo__tasks">
 

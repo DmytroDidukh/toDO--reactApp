@@ -1,0 +1,84 @@
+$grey: #C9D1D3;
+$blue: #64C4ED;
+$pink: #FFBBCC;
+$green: #42B883;
+$lime: #d3ce57;
+$red: #FF6464;
+$black: #383639;
+$purple: #C355F5;
+
+.badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  transition: transform .1s ease-in-out;
+
+  &.active {
+    transform: scale(1.1);
+  }
+
+  &--green {
+    background: $green;
+
+    &.active {
+      border: 2px solid darken($green, 15%);
+    }
+  }
+
+  &--pink {
+    background: $pink;
+
+    &.active {
+      border: 2px solid darken($pink, 15%);
+    }
+  }
+
+  &--blue {
+    background: $blue;
+
+    &.active {
+      border: 2px solid darken($blue, 15%);
+    }
+  }
+
+  &--black {
+    background: $black;
+
+    &.active {
+      border: 2px solid darken($black, 15%);
+    }
+  }
+
+  &--lime {
+    background: $lime;
+
+    &.active {
+      border: 2px solid darken($lime, 15%);
+    }
+  }
+
+  &--grey {
+    background: $grey;
+
+    &.active {
+      border: 2px solid darken($grey, 15%);
+    }
+  }
+
+  &--purple {
+    background: $purple;
+
+    &.active {
+      border: 2px solid darken($purple, 15%);
+    }
+  }
+
+  &--red {
+    background: $red;
+
+    &.active {
+      border: 2px solid darken($red, 15%);
+    }
+  }
+}
