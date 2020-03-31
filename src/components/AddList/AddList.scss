@@ -1,9 +1,7 @@
 .add-list {
   z-index: 10;
   position: relative;
-  .list {
 
-  }
   &__popup {
     width: 240px;
     height: 150px;
@@ -26,6 +24,16 @@
       margin: 10px 0 15px;
     }
 
+    .error {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: red;
+      font-size: 10px;
+    }
+
     .fa-times-circle {
       position: absolute;
       right: -5px;
@@ -39,10 +47,6 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
-
-      &.active {
-        //border: 2px solid #525252;
-      }
     }
   }
 }

@@ -6,9 +6,31 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './AddList.scss'
 
 
-const AddList = ({colors}) => {
+const AddList = ({colors, onAdd}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
-    const [selectedColor, selectColor] = useState(null);
+    const [selectedColor, selectColor] = useState(colors[0].id);
+    const [inputValue, setInputValue] = useState('');
+    const [isVisibleError, setErrorVisibility] = useState(false);
+
+
+    function addList() {
+        if (!inputValue) {
+            setErrorVisibility(true);
+            return;
+        }
+
+        const color = colors.find(color => selectedColor === color.id).name;
+        onAdd({id: Math.random(), name: inputValue, color: color,});
+
+        clearPopup()
+    }
+
+    function clearPopup() {
+        setErrorVisibility(false);
+        setVisiblePopup(false);
+        setInputValue('');
+        selectColor(colors[0].id)
+    }
 
     return (
         <div className="add-list">
@@ -25,8 +47,15 @@ const AddList = ({colors}) => {
             />
             {
                 visiblePopup && <div className="add-list__popup">
-                    <FontAwesomeIcon onClick={() => setVisiblePopup(false)} icon={'times-circle'}/>
-                    <input className={'field'} type="text" placeholder={"Folder name"}/>
+                    <FontAwesomeIcon
+                        onClick={clearPopup}
+                        icon={'times-circle'}
+                    />
+                    <input value={inputValue} className={'field'}
+                           type="text" placeholder={"Folder name"}
+                           onChange={event => setInputValue(event.target.value)}
+                           // maxlength="40"
+                    />
                     <div className="add-list__popup-colors">
                         {
                             colors.map(color => (
@@ -40,7 +69,10 @@ const AddList = ({colors}) => {
                             )
                         }
                     </div>
-                    <button className={"button"}>ADD</button>
+                    <button onClick={addList}
+                            className={"button"}>ADD
+                    </button>
+                    {isVisibleError && <div className={'error'}>Enter folder name, please</div>}
                 </div>
             }
         </div>

@@ -22,7 +22,7 @@ $border-radius: 5px;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 750px;
+  width: 850px;
   height: 530px;
   transform: translate(-50%, -50%);
   background: #F4F6F8;
@@ -34,8 +34,7 @@ $border-radius: 5px;
 
   &__sidebar {
     background: #E5E5E5;
-    width: 200px;
-    //height: calc(100% - 120px);
+    width: 250px;
     border-right: 1px solid #F1F1F1;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
@@ -44,6 +43,7 @@ $border-radius: 5px;
   }
 
   &__tasks {
+    padding: 60px;
     flex: 1;
   }
 }

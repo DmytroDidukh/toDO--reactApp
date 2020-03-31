@@ -1,12 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import List from './components/List/index'
 import AddList from "./components/AddList";
+import Tasks from "./components/Tasks";
 
-import dB from './assets/db'
+import dataBase from './assets/db'
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+
 function App() {
+    const [lists, setLists] = useState(
+        dataBase.lists.map(list => {
+            list.color = dataBase.colors.find(color => color.id === list.colorId).name;
+            return list
+        }));
+
+    function onAddLists (obj) {
+        const newList = [...lists, obj];
+        setLists(newList)
+    }
+
+
+
     return (
         <div className="todo">
             <div className="todo__sidebar">
@@ -14,34 +29,19 @@ function App() {
                     {
                         icon: <FontAwesomeIcon icon={'stream'}/>,
                         name: 'All tasks',
-                        active: false,
+                        active: true,
 
                     },
                 ]}/>
-                <List items={[
-                    {
-                        color: 'green',
-                        name: 'To buy',
-                        active: false,
-                    },
-                    {
-                        color: 'pink',
-                        name: 'To read',
-                        active: true,
-                    },
-                    {
-                        color: 'blue',
-                        name: 'Frontend',
-                        active: false,
-                    },
-
-                ]}
-                      isRemoveable={true}
+                <List
+                    items={lists}
+                    onRemove={(item) => console.log(item)}
+                    isRemoveable={true}
                 />
-                <AddList colors={dB.colors}/>
+                <AddList onAdd={onAddLists} colors={dataBase.colors}/>
             </div>
             <div className="todo__tasks">
-
+               <Tasks/>
             </div>
         </div>
     );

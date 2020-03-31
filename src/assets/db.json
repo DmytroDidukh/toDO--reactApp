@@ -2,45 +2,35 @@
   "lists": [
     {
       "id": 1,
-      "name": "Продажи",
+      "name": "NodeJS",
       "colorId": 5
     },
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Frontend",
       "colorId": 4
     },
     {
       "id": 3,
-      "name": "Фильмы и сериалы",
-      "colorId": 3
-    },
-    {
-      "id": 4,
-      "name": "Книги",
+      "name": "Books",
       "colorId": 2
     },
     {
-      "id": 5,
-      "name": "Личное",
+      "id": 4,
+      "name": "Personal",
       "colorId": 1
     },
     {
-      "name": "Спорт",
-      "colorId": 3,
-      "id": 6
-    },
-    {
-      "name": "Курс по ReactJS ToDo",
-      "colorId": 7,
-      "id": 7
+      "id": 5,
+      "name": "Learn ReactJS",
+      "colorId": 7
     }
   ],
   "tasks": [
     {
       "id": 1,
       "listId": 2,
-      "text": "Изучить JavaScript",
+      "text": "Learn JavaScript",
       "completed": true
     },
     {

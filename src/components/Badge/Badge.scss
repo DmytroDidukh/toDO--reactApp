@@ -2,7 +2,7 @@ $grey: #C9D1D3;
 $blue: #64C4ED;
 $pink: #FFBBCC;
 $green: #42B883;
-$lime: #d3ce57;
+$lime: #fbab3e;
 $red: #FF6464;
 $black: #383639;
 $purple: #C355F5;
@@ -15,7 +15,7 @@ $purple: #C355F5;
   transition: transform .1s ease-in-out;
 
   &.active {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 
   &--green {
