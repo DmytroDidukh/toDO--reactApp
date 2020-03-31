@@ -1,0 +1,60 @@
+.badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  transition: transform 0.1s ease-in-out;
+}
+.badge.active {
+  transform: scale(1.3);
+}
+.badge--green {
+  background: #42B883;
+}
+.badge--green.active {
+  border: 2px solid #2e805b;
+}
+.badge--pink {
+  background: #FFBBCC;
+}
+.badge--pink.active {
+  border: 2px solid #ff6f93;
+}
+.badge--blue {
+  background: #64C4ED;
+}
+.badge--blue.active {
+  border: 2px solid #1faae5;
+}
+.badge--black {
+  background: #383639;
+}
+.badge--black.active {
+  border: 2px solid #111112;
+}
+.badge--lime {
+  background: #fbab3e;
+}
+.badge--lime.active {
+  border: 2px solid #e88805;
+}
+.badge--grey {
+  background: #C9D1D3;
+}
+.badge--grey.active {
+  border: 2px solid #9fadb1;
+}
+.badge--purple {
+  background: #C355F5;
+}
+.badge--purple.active {
+  border: 2px solid #a90eef;
+}
+.badge--red {
+  background: #FF6464;
+}
+.badge--red.active {
+  border: 2px solid #ff1818;
+}
+
+/*# sourceMappingURL=Badge.css.map */

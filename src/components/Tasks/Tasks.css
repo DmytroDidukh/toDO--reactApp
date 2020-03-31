@@ -1,0 +1,73 @@
+.tasks {
+  user-select: none;
+}
+.tasks__title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #64C4ED;
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 20px;
+}
+.tasks__title:hover .edit-title {
+  opacity: 0.8;
+}
+.tasks__title .edit-title {
+  opacity: 0;
+  color: #DFDFDF;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.1s ease-in-out;
+}
+.tasks__title .edit-title:hover {
+  color: #acacac;
+}
+.tasks__items {
+  margin-top: 30px;
+}
+.tasks__items__item-block {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.tasks__items__item-block .checkbox:hover label {
+  background: #E5E5E5;
+  border: 1px solid #B3B3B3;
+}
+.tasks__items__item-block .checkbox:hover label .check {
+  color: #B3B3B3;
+}
+.tasks__items__item-block .checkbox input {
+  display: none;
+}
+.tasks__items__item-block .checkbox label {
+  display: flex;
+  border: 2px solid #E8E8E8;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+}
+.tasks__items__item-block .checkbox label .check {
+  color: #F4F6F8;
+  font-size: 10px;
+  transition: color 0.15s ease-in-out;
+}
+.tasks__items__item-block .checkbox input:checked + label {
+  background: #4DD599;
+  border-color: #4DD599;
+}
+.tasks__items__item-block .checkbox input:checked + label .check {
+  color: white;
+}
+.tasks__items__item-block p {
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=Tasks.css.map */

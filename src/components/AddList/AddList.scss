@@ -1,0 +1,52 @@
+.add-list {
+  z-index: 10;
+  position: relative;
+
+  &__popup {
+    width: 240px;
+    height: 150px;
+    background: #FFFFFF;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 18px;
+    position: relative;
+    left: 10px;
+    margin-top: -20px;
+
+    &-colors {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+
+    .button {
+      width: 100%;
+      margin: 10px 0 15px;
+    }
+
+    .error {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: red;
+      font-size: 10px;
+    }
+
+    .fa-times-circle {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      font-size: 17px;
+      color: #5C5C5C;
+      cursor: pointer;
+    }
+
+    .badge {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}
