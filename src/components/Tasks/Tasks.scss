@@ -63,10 +63,12 @@
           cursor: pointer;
           justify-content: center;
           align-items: center;
+          transition: all .15s ease-in-out;
 
           .check {
             color: #F4F6F8;
             font-size: 10px;
+            transition: color .15s ease-in-out;
           }
         }
 
