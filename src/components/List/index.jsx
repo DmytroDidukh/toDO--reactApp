@@ -1,16 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
+import axios from 'axios'
 
-import Badge from '../Badge'
+import {Badge, FontAwesomeIcon} from '../../components'
 
 import './List.scss'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 const List = ({items, isRemoveable, onClick, onRemove}) => {
 
     function removeList(list) {
         if (window.confirm('Delete folder?')) {
-            onRemove(list)
+            axios.delete('http://localhost:3001/lists/' + list.id)
+                .then(() => {
+                    onRemove(list)
+                });
         }
     }
 
@@ -19,7 +23,7 @@ const List = ({items, isRemoveable, onClick, onRemove}) => {
             {
                 items.map((item, index) => (
                     <li key={index} className={classNames(item.className, {'active': item.active})}>
-                        <i>{item.icon ? item.icon : <Badge color={item.color}/>}</i>
+                        <i>{item.icon ? item.icon : <Badge color={item.color.name}/>}</i>
                         <span>{item.name}</span>
                         {isRemoveable && <FontAwesomeIcon onClick={() => removeList(item)} icon={'trash-alt'}/>}
                     </li>

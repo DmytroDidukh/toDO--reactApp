@@ -1,16 +1,22 @@
-import React, {useState} from "react";
-import List from "../List";
-import Badge from "../Badge";
+import React, {useState, useEffect} from "react";
+import axios from 'axios'
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {List, Badge, FontAwesomeIcon} from '../../components'
+
 import './AddList.scss'
 
 
 const AddList = ({colors, onAdd}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
-    const [selectedColor, selectColor] = useState(colors[0].id);
+    const [selectedColor, selectColor] = useState(1);
     const [inputValue, setInputValue] = useState('');
+
     const [isVisibleError, setErrorVisibility] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        if (Array.isArray(colors)) selectColor(colors[0].id)
+    }, [colors]);
 
 
     function addList() {
@@ -19,17 +25,26 @@ const AddList = ({colors, onAdd}) => {
             return;
         }
 
-        const color = colors.find(color => selectedColor === color.id).name;
-        onAdd({id: Math.random(), name: inputValue, color: color,});
+        setIsLoading(true);
 
-        clearPopup()
+        axios
+            .post('http://localhost:3001/lists', {
+                name: inputValue,
+                colorId: selectedColor,
+            })
+            .then(({data}) => {
+                const color = colors.find(color => selectedColor === color.id).name;
+                const listObj = {...data, color : {name: color}};
+                onAdd(listObj);
+                onClose()
+            }).finally( () => setIsLoading(false));
     }
 
-    function clearPopup() {
+    function onClose() {
         setErrorVisibility(false);
         setVisiblePopup(false);
         setInputValue('');
-        selectColor(colors[0].id)
+        selectColor(colors[0].id);
     }
 
     return (
@@ -48,13 +63,13 @@ const AddList = ({colors, onAdd}) => {
             {
                 visiblePopup && <div className="add-list__popup">
                     <FontAwesomeIcon
-                        onClick={clearPopup}
+                        onClick={onClose}
                         icon={'times-circle'}
                     />
                     <input value={inputValue} className={'field'}
                            type="text" placeholder={"Folder name"}
                            onChange={event => setInputValue(event.target.value)}
-                           // maxlength="40"
+                        // maxlength="40"
                     />
                     <div className="add-list__popup-colors">
                         {
@@ -70,7 +85,8 @@ const AddList = ({colors, onAdd}) => {
                         }
                     </div>
                     <button onClick={addList}
-                            className={"button"}>ADD
+                            className={"button"}>
+                        {!isLoading ? 'ADD' : 'Adding...'}
                     </button>
                     {isVisibleError && <div className={'error'}>Enter folder name, please</div>}
                 </div>

@@ -1,5 +1,3 @@
-/*руддщ цщдв*/
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +23,7 @@ $border-radius: 5px;
   left: 50%;
   top: 50%;
   width: 850px;
-  height: 530px;
+  min-height: 530px;
   transform: translate(-50%, -50%);
   background: #F4F6F8;
   box-shadow: 2px 2px 20px #f3f3f3;

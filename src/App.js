@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
-import List from './components/List/index'
-import AddList from "./components/AddList";
-import Tasks from "./components/Tasks";
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 
-import dataBase from './assets/db'
-
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {List, AddList, Tasks, FontAwesomeIcon} from './components'
 
 
 function App() {
-    const [lists, setLists] = useState(
-        dataBase.lists.map(list => {
-            list.color = dataBase.colors.find(color => color.id === list.colorId).name;
-            return list
-        }));
+    const [lists, setLists] = useState(null);
+    const [colors, setColors] = useState(null);
 
-    function onAddLists (obj) {
+    useEffect(() => {
+        axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({data}) => {
+            setLists(data)
+        });
+        axios.get('http://localhost:3001/colors').then(({data}) => {
+            setColors(data)
+        });
+    }, []);
+
+    function onAddLists(obj) {
         const newList = [...lists, obj];
         setLists(newList)
     }
-
-
 
     return (
         <div className="todo">
@@ -33,15 +33,18 @@ function App() {
 
                     },
                 ]}/>
-                <List
+                {lists ? (<List
                     items={lists}
-                    onRemove={(item) => console.log(item)}
+                    onRemove={(item) => {
+                        setLists(lists.filter(list => list.id !== item.id));
+                        console.log(`${item.name} deleted... :)`)
+                    }}
                     isRemoveable={true}
-                />
-                <AddList onAdd={onAddLists} colors={dataBase.colors}/>
+                />) : ('Loading...')}
+                <AddList onAdd={onAddLists} colors={colors}/>
             </div>
             <div className="todo__tasks">
-               <Tasks/>
+                {lists && <Tasks list={lists[1]}/>}
             </div>
         </div>
     );
