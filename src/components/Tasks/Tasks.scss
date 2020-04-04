@@ -1,10 +1,11 @@
 .tasks {
   user-select: none;
+  margin-top: 60px;
 
   &__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    color: #64C4ED;
+    /*color: #64C4ED;*/
     border-bottom: 1px solid #E5E5E5;
     padding-bottom: 20px;
     position: relative;
@@ -50,7 +51,11 @@
       align-items: center;
       margin: 10px 0;
 
-      .checkbox {
+      &:hover div > .fa-times, &:hover div > .fa-pencil-alt {
+        opacity: .3;
+      }
+
+      &__checkbox {
 
         &:hover label {
           background: #E5E5E5;
@@ -93,23 +98,32 @@
         }
       }
 
-      p {
+      input {
         margin-left: 15px;
         flex: 1;
-
-        &:hover + .fa-times {
-          opacity: .3;
-        }
+        border: none;
+        cursor: inherit;
       }
 
-      .fa-times {
-        color: red;
-        opacity: 0;
-        cursor: pointer;
-        transition: opacity .1s ease-in-out;
+      &__actions {
+        & > * {
+          opacity: 0;
+          cursor: pointer;
+          transition: all .1s ease-in-out;
 
-        &:hover {
-          opacity: .7;
+          &:hover {
+            transform: scale(1.2);
+            opacity: .8 !important;
+          }
+        }
+
+        .fa-times {
+          color: red;
+          margin-left: 10px;
+        }
+
+        .fa-pencil-alt {
+          color: #42B883;
         }
       }
     }

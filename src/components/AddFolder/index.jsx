@@ -87,10 +87,11 @@ const AddFolder = ({colors, onAdd}) => {
                         }
                     </div>
                     <button onClick={addFolder}
-                            className={"button"}>
+                            className={"button"}
+                            disabled={!inputValue.trim() || isLoading }>
                         {!isLoading ? 'ADD' : 'Adding...'}
                     </button>
-                    {isVisibleError && <div className={'error'}>Enter folder name, please</div>}
+                    {/*{(isVisibleError && !inputValue.trim()) && <div className={'error'}>Enter folder name, please</div>}*/}
                 </div>
             }
         </div>

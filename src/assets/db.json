@@ -6,7 +6,7 @@
       "colorId": 5
     },
     {
-      "name": "Front-end",
+      "name": "Back-end",
       "id": 2,
       "colorId": 2
     },
@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Talk",
       "colorId": 3
+    },
+    {
+      "name": "Ababagalamaga",
+      "colorId": 6,
+      "id": 4
     }
   ],
   "tasks": [
@@ -52,6 +57,24 @@
       "text": "Documentation",
       "completed": false,
       "id": 6
+    },
+    {
+      "listId": 3,
+      "text": "With someone",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "listId": 3,
+      "text": "GG",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "listId": 4,
+      "text": "FFF",
+      "completed": false,
+      "id": 10
     }
   ],
   "colors": [
@@ -77,7 +100,7 @@
     },
     {
       "id": 5,
-      "hex": "#B6E6BD",
+      "hex": "#fbab3e",
       "name": "lime"
     },
     {

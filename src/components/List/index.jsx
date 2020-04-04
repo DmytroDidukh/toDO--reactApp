@@ -18,6 +18,7 @@ const List = ({items, isRemoveable, onAddFolder, onRemove, onFolderClick, active
         }
     }
 
+
     return (
         <ul onClick={onAddFolder} className="list">
             {

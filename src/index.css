@@ -24,9 +24,9 @@ button {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 850px;
-  min-height: 530px;
   transform: translate(-50%, -50%);
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   background: #F4F6F8;
   box-shadow: 2px 2px 20px #f3f3f3;
   border-radius: 5px;
@@ -43,10 +43,11 @@ button {
   padding: 60px 20px;
 }
 .todo__tasks {
-  padding: 60px;
+  padding: 0 60px 60px;
   flex: 1;
   position: relative;
   background: #FFFFFF;
+  overflow: auto;
 }
 
 .field {

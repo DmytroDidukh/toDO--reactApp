@@ -9,9 +9,9 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     padding: 18px;
-    position: relative;
-    left: 10px;
-    margin-top: -20px;
+    position: absolute;
+    left: 5px;
+    top: 0;
 
     &-colors {
       display: flex;
@@ -22,9 +22,13 @@
     .button {
       width: 100%;
       margin: 10px 0 15px;
+      &:disabled {
+        background: #dedede;
+        color: #797979;
+      }
     }
 
-    .error {
+   /* .error {
       position: absolute;
       bottom: 2px;
       left: 50%;
@@ -32,7 +36,7 @@
       text-align: center;
       color: red;
       font-size: 10px;
-    }
+    }*/
 
     .fa-times-circle {
       position: absolute;

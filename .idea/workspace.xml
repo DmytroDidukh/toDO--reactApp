@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f4cc3a1-ab7b-413d-a332-380cd7a2eb45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Tasks/TaskForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tasks/Task.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Badge/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Badge/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddFolder/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tasks/TaskForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/TaskForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.scss" afterDir="false" />
@@ -22,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +53,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../okTenWeb" />
+    <property name="last_opened_file_path" value="D:/Studing/EPAM" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -128,7 +128,7 @@
       <workItem from="1585819617861" duration="11375000" />
       <workItem from="1585842546175" duration="117000" />
       <workItem from="1585900418308" duration="23370000" />
-      <workItem from="1586001729184" duration="13575000" />
+      <workItem from="1586001729184" duration="26932000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1585303217023</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585673493206</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Task bar + &quot;add task&quot; option + json-server">
+      <created>1586016421766</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586016421766</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +222,7 @@
     <MESSAGE value="fixup! add fontawasome" />
     <MESSAGE value="added &quot;Add folder&quot; btn" />
     <MESSAGE value="added popUp menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added popUp menu" />
+    <MESSAGE value="Task bar + &quot;add task&quot; option + json-server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task bar + &quot;add task&quot; option + json-server" />
   </component>
 </project>

@@ -9,9 +9,18 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   padding: 18px;
-  position: relative;
-  left: 10px;
-  margin-top: -20px;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  /* .error {
+     position: absolute;
+     bottom: 2px;
+     left: 50%;
+     transform: translateX(-50%);
+     text-align: center;
+     color: red;
+     font-size: 10px;
+   }*/
 }
 .add-folder__popup-colors {
   display: flex;
@@ -22,14 +31,9 @@
   width: 100%;
   margin: 10px 0 15px;
 }
-.add-folder__popup .error {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: red;
-  font-size: 10px;
+.add-folder__popup .button:disabled {
+  background: #dedede;
+  color: #797979;
 }
 .add-folder__popup .fa-times-circle {
   position: absolute;

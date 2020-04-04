@@ -1,10 +1,11 @@
 .tasks {
   user-select: none;
+  margin-top: 60px;
 }
 .tasks__title {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
-  color: #64C4ED;
+  /*color: #64C4ED;*/
   border-bottom: 1px solid #E5E5E5;
   padding-bottom: 20px;
   position: relative;
@@ -43,17 +44,20 @@
   align-items: center;
   margin: 10px 0;
 }
-.tasks__items__item-block .checkbox:hover label {
+.tasks__items__item-block:hover div > .fa-times, .tasks__items__item-block:hover div > .fa-pencil-alt {
+  opacity: 0.3;
+}
+.tasks__items__item-block__checkbox:hover label {
   background: #E5E5E5;
   border: 1px solid #B3B3B3;
 }
-.tasks__items__item-block .checkbox:hover label .check {
+.tasks__items__item-block__checkbox:hover label .check {
   color: #B3B3B3;
 }
-.tasks__items__item-block .checkbox input {
+.tasks__items__item-block__checkbox input {
   display: none;
 }
-.tasks__items__item-block .checkbox label {
+.tasks__items__item-block__checkbox label {
   display: flex;
   border: 2px solid #E8E8E8;
   border-radius: 30px;
@@ -64,33 +68,39 @@
   align-items: center;
   transition: all 0.15s ease-in-out;
 }
-.tasks__items__item-block .checkbox label .check {
+.tasks__items__item-block__checkbox label .check {
   color: #F4F6F8;
   font-size: 10px;
   transition: color 0.15s ease-in-out;
 }
-.tasks__items__item-block .checkbox input:checked + label {
+.tasks__items__item-block__checkbox input:checked + label {
   background: #4DD599;
   border-color: #4DD599;
 }
-.tasks__items__item-block .checkbox input:checked + label .check {
+.tasks__items__item-block__checkbox input:checked + label .check {
   color: white;
 }
-.tasks__items__item-block p {
+.tasks__items__item-block input {
   margin-left: 15px;
   flex: 1;
+  border: none;
+  cursor: inherit;
 }
-.tasks__items__item-block p:hover + .fa-times {
-  opacity: 0.3;
-}
-.tasks__items__item-block .fa-times {
-  color: red;
+.tasks__items__item-block__actions > * {
   opacity: 0;
   cursor: pointer;
-  transition: opacity 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
-.tasks__items__item-block .fa-times:hover {
-  opacity: 0.7;
+.tasks__items__item-block__actions > *:hover {
+  transform: scale(1.2);
+  opacity: 0.8 !important;
+}
+.tasks__items__item-block__actions .fa-times {
+  color: red;
+  margin-left: 10px;
+}
+.tasks__items__item-block__actions .fa-pencil-alt {
+  color: #42B883;
 }
 .tasks__form {
   margin-top: 20px;

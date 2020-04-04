@@ -48,7 +48,7 @@ const TaskForm = ({folder, onAddTask}) => {
                            value={inputValue}
                            onChange={e => setInputValue(e.target.value)}
                     />
-                    <button onClick={addTask} disabled={isPosting}
+                    <button onClick={addTask} disabled={!inputValue.trim() || isPosting}
                             className={"button create-task-btn"}>{!isPosting ? 'Add task' : 'Adding...'}
                     </button>
                     <button onClick={toggleFormVisible}

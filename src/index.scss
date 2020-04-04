@@ -26,9 +26,9 @@ $border-radius: 5px;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 850px;
-  min-height: 530px;
   transform: translate(-50%, -50%);
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   background: #F4F6F8;
   box-shadow: 2px 2px 20px #f3f3f3;
   border-radius: $border-radius;
@@ -43,14 +43,14 @@ $border-radius: 5px;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     padding: 60px 20px;
-
   }
 
   &__tasks {
-    padding: 60px;
+    padding: 0 60px 60px;
     flex: 1;
     position: relative;
     background: #FFFFFF;
+    overflow: auto;
   }
 }
 
