@@ -3,13 +3,11 @@
 
   &__title {
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: bold;
     font-size: 32px;
-    line-height: 39px;
     color: #64C4ED;
     border-bottom: 1px solid #E5E5E5;
     padding-bottom: 20px;
+    position: relative;
 
     &:hover {
       .edit-title {
@@ -18,12 +16,14 @@
     }
 
     .edit-title {
+      position: absolute;
       opacity: 0;
       color: #DFDFDF;
       font-size: 15px;
       cursor: pointer;
       margin-left: 15px;
       transition: color .1s ease-in-out;
+      top: 25%;
 
       &:hover {
         color: darken(#DFDFDF, 20%);
@@ -33,6 +33,17 @@
 
   &__items {
     margin-top: 30px;
+
+    &__empty-title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Montserrat', -apple-system, sans-serif;
+      font-style: italic;
+      font-size: 25px;
+      color: #C9D1D3;
+    }
 
     &__item-block {
       display: flex;
@@ -84,7 +95,93 @@
 
       p {
         margin-left: 15px;
+        flex: 1;
+
+        &:hover + .fa-times {
+          opacity: .3;
+        }
       }
+
+      .fa-times {
+        color: red;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity .1s ease-in-out;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 20px;
+
+    &__add-task {
+      display: flex;
+      color: #B4B4B4;
+      font-style: italic;
+      cursor: pointer;
+      opacity: .4;
+      transition: all .1s ease-in-out;
+      width: fit-content;
+
+      &:hover {
+        opacity: .8;
+        color: darken(#B4B4B4, 5%);
+      }
+
+
+      span {
+        font-size: 16px;
+      }
+
+      .form-plus {
+        font-size: 18px;
+        margin-right: 15px;
+        margin-left: 2px;
+      }
+    }
+
+    &__create-task {
+      margin-top: 20px;
+
+      .create-task-btn {
+        width: 145px;
+        margin-top: 15px;
+
+        &:disabled {
+          background: #dedede;
+          color: #797979;
+        }
+      }
+
+      .cancel-task-btn {
+        width: 90px;
+        background: #F4F6F8;
+        border-radius: 4px;
+        color: #9C9C9C;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        margin-left: 10px;
+        transition: background-color .1s ease-in-out;
+
+        &:hover {
+          background: darken(#F4F6F8, 5%);
+        }
+
+        &:active {
+          background: darken(#F4F6F8, 10%);
+        }
+
+        &:disabled {
+          opacity: 0;
+        }
+
+      }
+
     }
   }
 }

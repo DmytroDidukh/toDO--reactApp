@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import axios from 'axios'
 
-import {Badge, FontAwesomeIcon} from '../../components'
+
+import {Badge, FontAwesomeIcon, axios} from '../../components'
 
 import './List.scss'
 
 
-const List = ({items, isRemoveable, onClick, onRemove}) => {
+const List = ({items, isRemoveable, onAddFolder, onRemove, onFolderClick, activeFolder}) => {
 
     function removeList(list) {
         if (window.confirm('Delete folder?')) {
@@ -19,12 +19,16 @@ const List = ({items, isRemoveable, onClick, onRemove}) => {
     }
 
     return (
-        <ul onClick={onClick} className="list">
+        <ul onClick={onAddFolder} className="list">
             {
                 items.map((item, index) => (
-                    <li key={index} className={classNames(item.className, {'active': item.active})}>
+                    <li key={index}
+                        className={classNames(item.className, {
+                            'active': item.active ? item.active : activeFolder && activeFolder.id === item.id})}
+                        onClick={onFolderClick ? () => onFolderClick(item) : null}
+                    >
                         <i>{item.icon ? item.icon : <Badge color={item.color.name}/>}</i>
-                        <span>{item.name}</span>
+                        <span>{item.name} {item.tasks && <span> ({item.tasks.length})</span>}</span>
                         {isRemoveable && <FontAwesomeIcon onClick={() => removeList(item)} icon={'trash-alt'}/>}
                     </li>
                 ))

@@ -3,30 +3,40 @@
 }
 .tasks__title {
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: bold;
   font-size: 32px;
-  line-height: 39px;
   color: #64C4ED;
   border-bottom: 1px solid #E5E5E5;
   padding-bottom: 20px;
+  position: relative;
 }
 .tasks__title:hover .edit-title {
   opacity: 0.8;
 }
 .tasks__title .edit-title {
+  position: absolute;
   opacity: 0;
   color: #DFDFDF;
   font-size: 15px;
   cursor: pointer;
   margin-left: 15px;
   transition: color 0.1s ease-in-out;
+  top: 25%;
 }
 .tasks__title .edit-title:hover {
   color: #acacac;
 }
 .tasks__items {
   margin-top: 30px;
+}
+.tasks__items__empty-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", -apple-system, sans-serif;
+  font-style: italic;
+  font-size: 25px;
+  color: #C9D1D3;
 }
 .tasks__items__item-block {
   display: flex;
@@ -68,6 +78,74 @@
 }
 .tasks__items__item-block p {
   margin-left: 15px;
+  flex: 1;
+}
+.tasks__items__item-block p:hover + .fa-times {
+  opacity: 0.3;
+}
+.tasks__items__item-block .fa-times {
+  color: red;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+}
+.tasks__items__item-block .fa-times:hover {
+  opacity: 0.7;
+}
+.tasks__form {
+  margin-top: 20px;
+}
+.tasks__form__add-task {
+  display: flex;
+  color: #B4B4B4;
+  font-style: italic;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.1s ease-in-out;
+  width: fit-content;
+}
+.tasks__form__add-task:hover {
+  opacity: 0.8;
+  color: #a7a7a7;
+}
+.tasks__form__add-task span {
+  font-size: 16px;
+}
+.tasks__form__add-task .form-plus {
+  font-size: 18px;
+  margin-right: 15px;
+  margin-left: 2px;
+}
+.tasks__form__create-task {
+  margin-top: 20px;
+}
+.tasks__form__create-task .create-task-btn {
+  width: 145px;
+  margin-top: 15px;
+}
+.tasks__form__create-task .create-task-btn:disabled {
+  background: #dedede;
+  color: #797979;
+}
+.tasks__form__create-task .cancel-task-btn {
+  width: 90px;
+  background: #F4F6F8;
+  border-radius: 4px;
+  color: #9C9C9C;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-left: 10px;
+  transition: background-color 0.1s ease-in-out;
+}
+.tasks__form__create-task .cancel-task-btn:hover {
+  background: #e4e9ee;
+}
+.tasks__form__create-task .cancel-task-btn:active {
+  background: #d5dde4;
+}
+.tasks__form__create-task .cancel-task-btn:disabled {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=Tasks.css.map */

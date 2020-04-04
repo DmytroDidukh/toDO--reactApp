@@ -1,25 +1,49 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios'
 
-import {List, AddList, Tasks, FontAwesomeIcon} from './components'
+import {List, AddFolder, Tasks, FontAwesomeIcon, axios} from './components'
 
 
 function App() {
-    const [lists, setLists] = useState(null);
+    const [folders, setFolders] = useState(null);
     const [colors, setColors] = useState(null);
+    const [activeFolder, setActiveFolder] = useState(null);
+
 
     useEffect(() => {
         axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({data}) => {
-            setLists(data)
+            setFolders(data)
         });
         axios.get('http://localhost:3001/colors').then(({data}) => {
             setColors(data)
         });
     }, []);
 
-    function onAddLists(obj) {
-        const newList = [...lists, obj];
-        setLists(newList)
+    function onAddFolder(folder) {
+        const newList = [...folders, folder];
+        setFolders(newList)
+    }
+
+    function onAddTask(folderId, newTask) {
+        const newList = folders.map(folder => {
+            if (folder.id === folderId) {
+                folder.tasks.push(newTask)
+            }
+
+            return folder
+        });
+
+        setFolders(newList)
+    }
+
+    function onSetNewFolderTitle(id, title) {
+        const newList = folders.map(folder => {
+            if (folder.id === id) {
+                folder.name = title;
+            }
+            return folder
+        });
+
+        setFolders(newList)
     }
 
     return (
@@ -33,18 +57,30 @@ function App() {
 
                     },
                 ]}/>
-                {lists ? (<List
-                    items={lists}
-                    onRemove={(item) => {
-                        setLists(lists.filter(list => list.id !== item.id));
-                        console.log(`${item.name} deleted... :)`)
-                    }}
-                    isRemoveable={true}
-                />) : ('Loading...')}
-                <AddList onAdd={onAddLists} colors={colors}/>
+                {
+                    folders ? (<List
+                        items={folders}
+                        onRemove={(item) => {
+                            setFolders(folders.filter(folder => folder.id !== item.id));
+                            console.log(`${item.name} deleted... :)`)
+                        }}
+                        onFolderClick={(folder) => {
+                            setActiveFolder(folder)
+                        }}
+                        activeFolder={activeFolder}
+                        isRemoveable={true}
+                    />) : ('Loading...')
+                }
+                <AddFolder onAdd={onAddFolder} colors={colors}/>
             </div>
             <div className="todo__tasks">
-                {lists && <Tasks list={lists[1]}/>}
+                {
+                    folders && activeFolder &&
+                    <Tasks folder={activeFolder}
+                           onEditTitle={onSetNewFolderTitle}
+                           onAddTask={onAddTask}
+                    />
+                }
             </div>
         </div>
     );

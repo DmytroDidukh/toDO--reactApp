@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f4cc3a1-ab7b-413d-a332-380cd7a2eb45" name="Default Changelist" comment="яя">
-      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0f4cc3a1-ab7b-413d-a332-380cd7a2eb45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Tasks/TaskForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddList/AddList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddList/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Badge/Badge.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Badge/Badge.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddList/AddList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/AddFolder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddFolder/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Badge/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Badge/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/List/List.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/List.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tasks/Tasks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/Tasks.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tasks/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tasks/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,6 +126,9 @@
       <workItem from="1585756067657" duration="635000" />
       <workItem from="1585756815023" duration="2081000" />
       <workItem from="1585819617861" duration="11375000" />
+      <workItem from="1585842546175" duration="117000" />
+      <workItem from="1585900418308" duration="23370000" />
+      <workItem from="1586001729184" duration="13575000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1585303217023</created>

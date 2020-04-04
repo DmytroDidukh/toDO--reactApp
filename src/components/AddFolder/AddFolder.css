@@ -1,8 +1,8 @@
-.add-list {
+.add-folder {
   z-index: 10;
   position: relative;
 }
-.add-list__popup {
+.add-folder__popup {
   width: 240px;
   height: 150px;
   background: #FFFFFF;
@@ -13,16 +13,16 @@
   left: 10px;
   margin-top: -20px;
 }
-.add-list__popup-colors {
+.add-folder__popup-colors {
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
 }
-.add-list__popup .button {
+.add-folder__popup .button {
   width: 100%;
   margin: 10px 0 15px;
 }
-.add-list__popup .error {
+.add-folder__popup .error {
   position: absolute;
   bottom: 2px;
   left: 50%;
@@ -31,7 +31,7 @@
   color: red;
   font-size: 10px;
 }
-.add-list__popup .fa-times-circle {
+.add-folder__popup .fa-times-circle {
   position: absolute;
   right: -5px;
   top: -5px;
@@ -39,10 +39,10 @@
   color: #5C5C5C;
   cursor: pointer;
 }
-.add-list__popup .badge {
+.add-folder__popup .badge {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 
-/*# sourceMappingURL=AddList.css.map */
+/*# sourceMappingURL=AddFolder.css.map */

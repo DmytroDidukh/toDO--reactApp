@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
 .fas {
   color: red;
 }
@@ -45,6 +49,8 @@ $border-radius: 5px;
   &__tasks {
     padding: 60px;
     flex: 1;
+    position: relative;
+    background: #FFFFFF;
   }
 }
 
@@ -71,7 +77,7 @@ $border-radius: 5px;
   color: #fff;
   border: none;
   padding: 10px 20px;
-  cursor: pointer;
+  transition: all .1s ease-in-out;
 
   &:hover {
     background: darken(#4DD599, 6%);

@@ -22,6 +22,9 @@
   font-size: 13px;
   flex: 1;
 }
+.list li span span {
+  color: #a0a0a0;
+}
 .list li:hover {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 4px;

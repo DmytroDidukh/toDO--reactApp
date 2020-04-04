@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
 .fas {
   color: red;
 }
@@ -41,6 +45,8 @@ body {
 .todo__tasks {
   padding: 60px;
   flex: 1;
+  position: relative;
+  background: #FFFFFF;
 }
 
 .field {
@@ -64,7 +70,7 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 .button:hover {
   background: #34cf8b;
